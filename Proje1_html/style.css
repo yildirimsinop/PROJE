@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    text-align: center;
+    background-color: rgba(8, 12, 19, 0.943)
+}
+
+nav a {
+    margin: 0px 6px;
+    padding:10px 30px;
+    text-decoration: none;
+    background-color: rgba(249, 219, 183, 0.79);
+    border-radius: 10px; 
+    font-weight: bold;
+}
+
+/* .button a:link {
+background-color: green;
+} */
+/* .button a:visited {
+background-color: rgb(69, 69, 26);
+} */
+.button a:hover {
+background-color: rgba(167, 147, 123, 0.874);
+color: red;
+}
+.button a:active {
+    background-color: orange;
+}
+
+
+h1, h5, .contact, .image, nav a, p  {
+    color: white;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+}
+
+/* ! -------------FOTO--------------- */
+.image {
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+#foto1 {
+    width: 300px;
+    height: 350px;
+    border-radius: 5%;
+}
+#foto2 {
+    width: 300px;
+    height: 350px;
+    border-radius: 5%;
+}
+#foto3 {
+    width: 300px;
+    height: 350px;
+    border-radius: 5%;
+}
+#foto4 {
+    width: 300px;
+    height: 350px;
+    border-radius: 5%;
+}
+#foto5 {
+    width: 300px;
+    height: 350px;
+    border-radius: 5%;
+}
+
+
+div div.myfoto :hover {
+    margin-bottom: 1px;
+    background-color: aliceblue;
+    cursor: pointer;
+    
+}
+
+.contact {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: x-large;
+    
+    
+}
+
+
+p {
+    margin-top: 150px;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.814);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-shadow: 4px 2px 0px bisque;
+}
+
+.after::after {
+content: " 👋";
+}
+
+footer div a {
+    text-decoration: none;
+    margin-top: 40px;
+    padding: 15px;
+    color: bisque;
+    
+}
+
+footer a :hover {
+    color: orangered;
+}
+
+h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    font-size: 40px;
+    width: 80px;
+    height: 40px;
+    background-color:bisque;
+    border-radius: 15%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fixed a {
+    color: white;
+}
+.fixed :hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#send {
+    padding: 10px;
+    width: 40%;
+    background-color: bisque
+}
+
+#isim {
+    padding: 10px;
+    width: 40%;
+    background-color: rgba(8, 12, 19, 0.943)
+}
+#email {
+    width: 40%;
+    padding:10px ;
+    background-color: rgba(8, 12, 19, 0.943)
+}
+#your-message {
+    width: 37%;
+    padding: 40px;
+    background-color: rgba(8, 12, 19, 0.943)
+
+}
+
+h6 {
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+

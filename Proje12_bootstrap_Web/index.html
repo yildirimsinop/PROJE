@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Web Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+              <!-- ****************NAVBAR******************** -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">Harvey Tech</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ms-auto"> <!-- ml-auto yerine ms-auto kullanılıyor -->
+                  <a class="nav-link active" aria-current="page" href="#services">Services</a>
+                  <a class="nav-link active" href="#portfolio">Portfolio</a>
+                  <a class="nav-link active" href="#about">About us</a>
+                  <a class="nav-link active" href="#staff">Staff</a>
+                  <a class="nav-link active" href="#contact">Contact Us</a>
+              </div>
+          </div>
+      </div>
+    </nav>
+    <main class="text-center">
+        <div class="row">
+            <div class="col text-center overlay-div">
+                <img src="./img/banner.jpeg" class="rounded banner-image img-fluid" alt="banner">
+                <h4 class="overlay-text">The IT Career of Your Dreams Starts Here!</h4>
+                <h2 class="overlay-subtext">Harvey Tech!</h2>
+                <button class="btn btn-danger overlay-button">Our services</button>
+            </div>
+        </div>
+
+        <!-- ************ SERVICES************** -->
+
+        <section id="services" class="container p-3">
+            <h2 class="text-dark display-6">Services</h2>
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-3">
+                <!--? icon büyüklüğünü fa-x özelliği ile ayarlayabiliriz  -->
+
+                <i class="icon-circle fa-solid fa-code fa-2x"></i>
+                <h4>Programming</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
+                  modi assumenda ab. Rerum, sequi neque?
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <i class="icon-circle fa-solid fa-palette fa-2x"></i>
+                <h4>Design</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
+                  modi assumenda ab. Rerum, sequi neque?
+                </p>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <i class="icon-circle fa-solid fa-network-wired fa-2x"></i>
+                <h4>Networking</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
+                  modi assumenda ab. Rerum, sequi neque?
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- ************ Portfolio************** -->
+
+          <section id="portfolio" class="portfolio bg-light mx-auto my-auto text-center">
+            <h2 class="text-dark display-6 mt-5">Portfolio</h2>
+            <p class="lorem mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum, magni asperiores velit necessitatibus deleniti repudiandae molestias veritatis delectus, vero quasi itaque rerum quam? Officiis!</p>
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card" style="width: 100%;">
+                <img src="./img/portfolio1.jpg" class="card-img-top img-fluid" alt="portfolio1">
+                <div class="card-body">
+                  <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+             </div>
+            </div>
+              <div class="col-lg-4">
+                <div class="card" style="width: 100%;">
+                    <img src="./img/portfolio2.jpg" class="card-img-top img-fluid" alt="portfolio2">
+                    <div class="card-body">
+                      <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                      
+                </div>
+              </div>
+                  <div class="col-lg-4">
+                    <div class="card" style="width: 100%;"><div class="card" style="width: 100%;"></div>
+                        <img src="./img/portfolio3.jpg" class="card-img-top img-fluid" alt="portfolio3">
+                        <div class="card-body">
+                          <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                          
+                    </div>
+                  </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-4">
+            <div class="card" style="width: 100%;"></div>
+                <img src="./img/portfolio4.jpg" class="card-img-top img-fluid" alt="portfolio1">
+                <div class="card-body">
+                  <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                  
+                </div>
+              
+              <div class="col-lg-4">
+                <div class="card" style="width: 100%;"></div>
+                    <img src="./img/portfolio5.jpg" class="card-img-top img-fluid" alt="portfolio2">
+                <div class="card-body">
+                      <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+                      
+              </div>
+                  
+                  <div class="col-lg-4">
+                    <div class="card" style="width: 100%;"></div>
+                        <img src="./img/portfolio2.jpg" class="card-img-top img-fluid" alt="portfolio3">
+                        <div class="card-body">
+                          <h5 class="Lorem, ipsum">Lorem, ipsum.</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+          </div>
+        </section>
+
+
+        <!-- ************ About us************** -->
+
+        <section id="about" class="About us">
+          <h2 class="text-dark display-6 mt-5">About us</h2>
+          <p class="lorem mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum,</p>
+          
+          <div class="container">
+            <div class="row flex-column-reverse flex-md-row">
+              <div class="col-sm-12 col-md-6">
+                <p style="text-align: left; margin-bottom: 1em;">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium voluptas officiis in sit voluptate ullam dicta magnam placeat odit aliquid, tempore similique animi dolor, ipsum nihil aliquam.
+                </p>
+                <p style="text-align: left; margin-bottom: 1em;">
+                  Quis quibusdam aut dolorem tempore inventore enim laboriosam obcaecati voluptatibus beatae, tenetur doloremque repudiandae hic incidunt porro, temporibus animi totam quisquam repellendus delectus atque nulla!
+                </p>
+                <p style="text-align: left; margin-bottom: 1em;">
+                  Quibusdam ea illo aspernatur. Facere nemo eos repellendus?
+                </p>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <img src="./img/aboutus.jpeg" width="100%" alt="aboutus">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ************ Our Team ************** -->
+
+        <section id="staff" class="About us bg-light">
+          <h2 class="text-dark display-6 mt-5">Our Team</h2>
+          <p class="lorem mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum, Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita dolorem consectetur, alias eos impedit ducimus quae.</p>
+
+          <div class="row mt-4">
+            <div class="col-lg-4">
+                <img src="./img/Mark.jpg" class=" rounded-circle border border-dark-emphasis" style="width: 250px; height: 250px; border-width: 10px !important;" alt="Mark">
+                  <h5 class="Lorem, ipsum mt-3">Mark Madisson</h5>
+                  <p class="text">Web developer</p>
+                  <div class="team p-2 mb-4 d-flex justify-content-center">
+                    <i class="twit fab fa-twitter"></i>
+                    <i class="face fab fa-facebook-f"></i>
+                    <i class="link fab fa-linkedin"></i>
+                  </div>
+             </div>
+            
+             <div class="col-lg-4">
+              <img src="./img/Noah.png" class="bilder card-img-top img-fluid rounded-circle border border-dark-emphasis" style="width: 250px; height: 250px; border-width: 10px !important;" alt="Noah">
+                <h5 class="Lorem, ipsum mt-3">Noah Adams</h5>
+                <p class="text">FullStack Developer</p>
+                <div class="team p-2 mb-4 d-flex justify-content-center">
+                  <i class="twit fab fa-twitter"></i>
+                  <i class="face fab fa-facebook-f"></i>
+                  <i class="link fab fa-linkedin"></i>
+                </div>
+           </div>
+
+           <div class="col-lg-4">
+            <img src="./img/Harvey.png" class="bilder card-img-top img-fluid rounded-circle border border-dark-emphasis" style="width: 250px; height: 250px; border-width: 10px !important;" alt="Harvey">
+              <h5 class="Lorem, ipsum mt-3">Harvey Watson</h5>
+              <p class="text">Mobile Developer</p>
+              <div class="team p-2 mb-4 d-flex justify-content-center">
+                <i class="twit fab fa-twitter"></i>
+                <i class="face fab fa-facebook-f"></i>
+                <i class="link fab fa-linkedin"></i>
+              </div>
+           </div>
+          </div>
+          </div>
+
+          <!-- ************ Google ************** -->
+
+
+          <div class="row mt-5 justify-content-between text-center text-black">
+            <div class="col-sm">
+                <a href="https://www.google.com/" target="_self">
+                    Google
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www.goldmansachs.com/" target="_blank">
+                    Goldman Sachs
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www.apple.com/" target="_blank">
+                  <i class="fab fa-apple"></i>
+                    Apple
+                </a>
+            </div>
+            <div class="infosys col-sm">
+                <a href="https://www.infosys.com/" target="_blank">
+                   <span class="infosys">Infosys</span> 
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www2.deloitte.com/no/no.html" target="_blank">
+                    Deloitte
+                </a>
+            </div>
+        </div>
+        
+        <!-- ************ Contacct us************** -->
+
+        <section id="contact" class="About us img-thumbnail position-relative mt-5 p-3" style="background: url('./img/map.jpeg') no-repeat center center/cover; height: 500px;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-12 text-center text-white">
+                      <h2 class="display-6 mt-5">Contact us</h2>
+                      <p class="lorem mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum voluptatum,</p>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 col-md-6">
+                      <div class="name mb-4">
+                          <input type="text" class="form-control" placeholder="Name">
+                      </div>
+                      <div class="email mb-4">
+                          <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="phone mb-4">
+                          <input type="number" class="form-control" placeholder="Phone">
+                      </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12 text-center mt-4">
+                      <button class="btn btn-danger text-light">Send Message</button>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </menu>
+
+    <footer class="footer mt-4 mb-4">
+      <div class="p-4 h6 justify-content-center text-center">
+        All Rights Reserved
+        &copy
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

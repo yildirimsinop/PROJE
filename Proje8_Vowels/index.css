@@ -1,0 +1,17 @@
+#inputString {
+    margin-bottom: 0.5rem;
+    width: 22rem;
+    height: 2rem;
+
+}
+
+#inputString:focus {
+    outline: 2px solid orange;
+    border: none;
+}
+
+/* .highlight {
+    color: red;
+    font-weight: bolder;
+}
+ */

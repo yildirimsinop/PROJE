@@ -1,0 +1,46 @@
+body {
+  background:rgba(122, 132, 127, 0.822);
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+} 
+
+.saat-konteyner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.ClockDisplay {
+  width: 100%;
+  height: 113vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #dd0a3ff2;
+  font-size: 4rem;
+  font-weight: 990;
+  letter-spacing: 7px;
+  position: absolute;
+  z-index: 1;  
+  top: 0;
+  left: 0;
+} 
+
+.resim-konteyner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bilde {
+  max-width: 900px;
+  max-height: 900px;
+  object-fit: contain;
+}
+
+
+

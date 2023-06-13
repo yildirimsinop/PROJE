@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Guess The Number</title>
+</head>
+<body>
+    <main>
+        <article>
+            <h2 class="theGuess">Guess The Number (1 - 100)</h2>
+
+        </article>
+            <p id="message"></p>
+            <input type="number" id="userInput" min="1" max="100">
+            <button onclick="guess()" id="submit" >CHECK</button>
+            <br><br>
+
+        
+        <div>
+            <img src="./img/cap.jpg" width="200px" height="250px" alt="">
+        </div>
+        <div>
+            <p class="write">Write the number.</p>
+        </div>
+        <div>
+            <p class="number">Number of attempte: 3</p>
+        </div>
+
+    </main>
+
+    <script src="./index.js"></script>
+</body>
+</html>
