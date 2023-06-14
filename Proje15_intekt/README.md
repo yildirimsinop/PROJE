@@ -6,6 +6,11 @@ This is an Expense Tracker Web Application that tracks your income and expenses 
 
 All data is stored in the local storage of the browser, so it remains even after the page is refreshed or closed and reopened.
 
+## Gif
+
+. Intekt
+ <img src = "intekt.gif" Alt = "intekt">
+
 ## Features 
 
 ### Add Monthly Income
