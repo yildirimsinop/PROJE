@@ -6,6 +6,11 @@ This project aims to create a website using sass.
 ## Problem Statement
 Your company has recently started a project to create a company website page. You and your colleagues have started to work on it.
 
+## Gif
+
+. to-do-app
+ <img src = "sassCss.gif" Alt = "sass">
+
 ## Project Skeleton 
 005-Sass-website-page-design (folder)
 |
