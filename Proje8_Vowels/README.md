@@ -11,6 +11,13 @@ This project consists of several important files:
 - `index.css`: This file contains all the styles that make our project look good. It includes styles for the input field and the button.
 - `index.js`: The JavaScript file that contains the function to count the vowels in the string. This function is triggered when the button in the `index.html` is clicked.
 
+## Gif
+
+. Vowels
+
+<img src="Vowels.gif" alt="Vowels">
+
+
 ## Usage
 
 To use this application, just open the `index.html` file in your preferred web browser. You will see an input field where you can enter a string, and a button to trigger the function to count the vowels. After you enter your string and click the button, you will see the result displayed below the button. The result shows the total number of vowels in your inputted string.
