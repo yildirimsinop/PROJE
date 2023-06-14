@@ -15,7 +15,7 @@ The project structure is as follows:
 
 .  Rock-Peper-Scissors
 
-<img src = "rockPeper.gif" Alt = "Rock"
+<img src = "rockPeper.gif" Alt = "Rock">
 
 
 
