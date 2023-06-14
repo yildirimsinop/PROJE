@@ -11,11 +11,17 @@ Clarusway-Paths-Webpage (folder)
 |----style.css # Stylesheet
 |----img (folder) # Folder for images
 
+## Gif
+
+. Paths
+<img src="Paths.gif" alt="Paths">
+
 
 ## Installation
 
 1. Clone this repository to your local machine using `https://github.com/yildirimsinop/Project.git`.
 2. Open `index.html` in your web browser to navigate the webpage.
+3. Open index.html in your preferred web browser to explore the webpage.
 
 ## Usage
 
@@ -33,7 +39,9 @@ Each section provides a brief overview of the learning path. Click on "Learn Mor
 
 ## Technologies Used
 
-This project was built using HTML and CSS.
+This project was built using 
+. HTML
+. CSS
 
 ## License
 
