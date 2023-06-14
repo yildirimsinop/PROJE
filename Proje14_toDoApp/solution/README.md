@@ -1,4 +1,4 @@
-    # to-do-app
+|    # to-do-app
 |-- README.md
 |
 |   This is a simple yet powerful To-Do App built using HTML, CSS and JavaScript. It allows users to add tasks, mark them as completed and auto delete them after completion.
