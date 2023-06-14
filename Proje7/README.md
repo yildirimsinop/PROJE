@@ -4,6 +4,12 @@ This project is a small but fun web page that allows users to change the backgro
 
 The project is built using standard web technologies: HTML, CSS, and JavaScript. HTML is used to create the structure of the page, including a title, a color display area, and a button. CSS styles are then applied to position these elements on the page, to define their appearance, and to create a responsive layout that looks good on all screen sizes. JavaScript provides the functionality to change the background color. It does this by listening for a click event on the button, then choosing a random color from a predefined array and applying this color as the new background color.
 
+## Gif
+
+. BackgroundColor
+
+<img src="BackgroundColor.gif" alt="BackgroundColor">
+
 ## Project Structure
 
 The project consists of several files:
