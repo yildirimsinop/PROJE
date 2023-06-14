@@ -7,6 +7,10 @@ This is a Netflix themed signup page created using HTML, CSS, and JavaScript. It
 1. Clone this repository to your local machine using `https://github.com/yourGithubUsername/netflix-signup-page.git`.
 2. Open `index.html` in your web browser to see the form.
 
+## Gif
+<img src="netflix" alt="netflix">
+
+
 ## Usage
 
 After opening `index.html` in your browser, you will see a form:
