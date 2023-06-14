@@ -1,6 +1,6 @@
 # ÜMİT YILDIRIM's Personal Website
 
-This is a personal website project for Ümit YILDIRIM. It showcases his skills as a Frontend Developer and his recent work. This website is designed with HTML and CSS, making use of various frameworks and libraries.
+This is a personal website project for Ümit YILDIRIM. It showcases his skills as a Frontend Developer and his recent work. This website is designed with HTML and CSS, making use of various frameworks and libraries. This website also includes a GIF animation showcasing the 'myProject'.
 
 ## Features
 
@@ -16,6 +16,7 @@ This is a personal website project for Ümit YILDIRIM. It showcases his skills a
 - CSS3
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
+- GIF Animations
 
 ## Gif
 <img src="myProject.gif" alt="myProject">
