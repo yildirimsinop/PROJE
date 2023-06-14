@@ -10,6 +10,13 @@ The project structure is as follows:
 - `style.css`: The CSS file for custom styles
 - `img/`: Directory containing images used in the web page
 
+## Gif
+
+. Harwey
+
+<img src = "Harwey(1).gif" Alt = "Harwey">
+
+
 ## Table of Contents
 - [Services](#services)
 - [Portfolio](#portfolio)
