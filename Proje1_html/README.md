@@ -17,6 +17,10 @@ This is a personal website project for Ümit YILDIRIM. It showcases his skills a
 - [Font Awesome](https://fontawesome.com/)
 - [Google Fonts](https://fonts.google.com/)
 
+## Gif
+<img src="myProject.gif" alt="myProject">
+  
+
 ## Screenshots
 
 This section will contain screenshots of the website.
