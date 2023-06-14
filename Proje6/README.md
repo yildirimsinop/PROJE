@@ -6,6 +6,12 @@ This project is a digital watch display built using HTML, CSS, and JavaScript.
 - Responsive design that fits any screen size.
 - Real-time watch display, updated every second.
 
+## Gif
+
+. Klokka
+
+<img src="klokka.gif" alt="Klokka">
+
 ## Project Structure
 
 The project is structured as follows:
