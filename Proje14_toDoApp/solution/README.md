@@ -9,10 +9,7 @@
 |   - Checkbox for marking tasks as completed.
 |   - Completed tasks are auto-removed after 2 seconds.
 |   
-|   ## Gif
-|
-|   . to-do-app
-|   <img src = "happyWdnesdag.gif" Alt = "to-do"
+|   
 |
 |   ## Usage
 |
