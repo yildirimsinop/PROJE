@@ -14,7 +14,8 @@ You can mark a task as completed by clicking the checkbox next to the task. The 
 ## Gif
 
 . to-do-app
- <img src = "happyWdnesdag.gif" Alt = "to-do"
+
+ <img src = "happyWdnesdag.gif" Alt = "to-do">
  
 ## Project Structure
 The project is structured as follows:
