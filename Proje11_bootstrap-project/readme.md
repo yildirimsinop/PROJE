@@ -16,6 +16,12 @@ The website includes the following sections:
 
 - **Up-Button:** A button fixed at the bottom right of the screen enables users to navigate back to the top of the page quickly and conveniently.
 
+## Gif
+
+. Bootstrap-Project
+
+img src = "about.gif" Alt = "Bootstrap"
+
 ## Project Structure
 
 The project maintains a simple and straightforward structure. The main HTML file contains links to Bootstrap's CSS and JS files, Font Awesome for icons, and a custom CSS file for additional styles. The HTML is arranged according to the different website sections, with each section wrapped in a `<section>` tag with a unique id for easy navigation and accessibility.
