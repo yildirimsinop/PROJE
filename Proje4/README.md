@@ -4,11 +4,16 @@ This project is a replica of Google's landing page. It is designed to resemble t
 
 ## Features
 
-- Fully responsive layout
-- Functional search bar
-- Clickable links
-- Navigation bar
-- Footer with additional links
+- A fully responsive layout that adjusts to different screen sizes.
+- Functional search bar for user input.
+- Interactive, clickable links for navigation.
+- A navigation bar on the top of the page.
+- A footer featuring additional links for more information.
+
+## Gif
+
+. google
+<img src="google.gif" alt="google">
 
 ## Project Structure
 
