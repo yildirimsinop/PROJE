@@ -20,7 +20,7 @@ The website includes the following sections:
 
 . Bootstrap-Project
 
-img src = "about.gif" Alt = "Bootstrap"
+<img src = "about.gif" Alt = "Bootstrap">
 
 ## Project Structure
 
