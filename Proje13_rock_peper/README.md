@@ -11,6 +11,14 @@ The project structure is as follows:
 - `app.js`: The JavaScript file for game logic
 - `assets/`: Directory containing image assets used in the game
 
+## Gif
+
+.  Rock-Peper-Scissors
+
+<img src = "rockPeper.gif" Alt = "Rock"
+
+
+
 ## Table of Contents
 - [Selectors](#selectors)
 - [Variables](#variables)
