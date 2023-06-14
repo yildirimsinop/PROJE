@@ -11,6 +11,12 @@ The project includes several important files:
 - `index.css`: This file contains all the styles that make our project look nice.
 - `Bootstrap CSS and JS`: The Bootstrap files used in the project. These files are used to create and style many components in the project.
 
+## Gif
+
+. Bootstrap
+
+<img src="Bootstrap.gif" alt="Bootstrap">
+
 ## Usage
 
 To use this template, simply open the `index.html` file in your preferred web browser. You can then view the navigation bar, carousel component, cards, and footer, and try out the interactive features.
