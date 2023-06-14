@@ -15,7 +15,7 @@ The project includes several important files:
 ## Gif
 . Guess The Number
 
-<img = "GuessTheNumber.gif" Alt = "Guess">
+<img src = "GuessTheNumber.gif" Alt = "Guess">
 
 ## How to Play
 
