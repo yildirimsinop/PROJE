@@ -8,7 +8,7 @@ This is a Netflix themed signup page created using HTML, CSS, and JavaScript. It
 2. Open `index.html` in your web browser to see the form.
 
 ## Gif
-<img src="netflix" alt="netflix">
+<img src="netflix.gif" alt="netflix">
 
 
 ## Usage
