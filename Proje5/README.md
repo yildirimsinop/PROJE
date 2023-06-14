@@ -6,6 +6,11 @@ This project is a simple replica of a calculator, built to practice front-end we
 - Fully functional calculator layout
 - Hover effects
 
+## Gif
+. Kalkulator
+
+<img src="kalkulator.gif" alt="kalkulator">
+
 ## Project Structure
 The project is structured as follows:
 
