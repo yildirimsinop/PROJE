@@ -12,6 +12,11 @@ The project includes several important files:
 
 - `index.js`: This is where the game logic lives. It includes a function to check if the user's guess is correct and give feedback to help guide them to the correct answer.
 
+## Gif
+. Guess The Number
+
+<img = "GuessTheNumber.gif" Alt = "Guess">
+
 ## How to Play
 
 To play the game, follow these steps:
