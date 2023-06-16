@@ -70,11 +70,18 @@ main.addEventListener("click", (e) => {
                     default:
                         break;
                 }
-                // screen.innerText = firstScreen
-                // screen.innerText = ""
+              
                 break;
             default:
                 break;
-        }
+        } 
+
+        } else if (e.target.innerText == "AC") {
+            firstScreen = ""
+            screen.innerText = ""
+            symbol = ""
+    } else if (e.target.innerText == "±") {
+        screen.innerText = Number(screen.innerText) * (-1)
     }
+
 })
