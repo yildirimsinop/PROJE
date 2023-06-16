@@ -56,22 +56,22 @@ main.addEventListener("click", (e) => {
                         console.log(screen.innerText);
                         break;
                     case "-":
-                        screen.innerText = firstScreen - screen.innerText
+                        screen.innerText = Number(firstScreen) - Number(screen.innerText)
                         break;
                     case "x":
-                        screen.innerText = firstScreen * screen.innerText
+                        screen.innerText = Number(firstScreen) * Number(screen.innerText)
                         break;
                     case "÷":
-                        screen.innerText = firstScreen / screen.innerText
+                        screen.innerText = Number(firstScreen) / Number(screen.innerText)
                         break;
                     case "%":
-                        screen.innerText = firstScreen * screen.innerText / 100
+                        screen.innerText = Number(firstScreen) * Number(screen.innerText) / 100
                         break;
                     default:
                         break;
                 }
-                screen.innerText = firstScreen
-                screen.innerText = ""
+                // screen.innerText = firstScreen
+                // screen.innerText = ""
                 break;
             default:
                 break;
