@@ -1,3 +1,6 @@
-fetch ("Deneme/settings.json").then(response => {
-    console.log(response);
+fetch ("settings.json").then(response => {
+    return response.json()
+}
+).then (responseJson => {
+    console.log(responseJson);
 })
