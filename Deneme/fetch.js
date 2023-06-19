@@ -3,4 +3,6 @@ fetch ("settings.json").then(response => {
 }
 ).then (responseJson => {
     console.log(responseJson);
+    console.log(responseJson.password);
 })
+
