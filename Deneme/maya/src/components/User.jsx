@@ -1,9 +1,9 @@
-function User (props) {
+function User ({name, surname, isLoggedIn, age}) {
     // console.log(props)
 
   return (  
   <h1>
-    {props.isLoggedIn ? `${props.name} ${props.surname}` : "Giris Yapmadiniz"}
+    {isLoggedIn ? `${name} ${surname} (${age})` : "Giris Yapmadiniz"}
     
  </h1>
 )
