@@ -11,7 +11,7 @@ function User ({name, surname, isLoggedIn, age, friends}) {
  {friends.map((friend, index)=> (
 
     <div key = {index}>
-        {index}. {friend}
+        {index}- {friend}
     </div>
 
  ))
