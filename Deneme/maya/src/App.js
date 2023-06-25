@@ -1,8 +1,10 @@
+
+import User from "./components/User"
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
-    </div>
+    <>
+      <User name= "Mehmet" surname = "yilmaz" isLoggedIn = {false}/>
+    </>
   )
 }
 

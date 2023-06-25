@@ -1,13 +1,12 @@
-import React from 'react'
+function User (props) {
+    // console.log(props)
 
-function User {
-
-  return (
-    <div>
-   selam   
-    </div>
-  )
-
+  return (  
+  <h1>
+    {props.isLoggedIn ? `${props.name} ${props.surname}` : "Giris Yapmadiniz"}
+    
+ </h1>
+)
 }
 
 
