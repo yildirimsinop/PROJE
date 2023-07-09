@@ -1,5 +1,7 @@
 
 import User from "./components/User"
+
+const friends = [... ];
 function App() {
   return (
     <>
@@ -8,7 +10,7 @@ function App() {
       surname = "yilmaz" 
       isLoggedIn = {true} 
       age= {29}
-      friends = {["Ahmet", "Tayfun", "Gokhan","Ayse","Fatma",]}
+      friends = {friends}
       />
     </>
   )
