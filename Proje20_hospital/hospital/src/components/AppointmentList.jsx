@@ -1,10 +1,20 @@
 import Stack from "react-bootstrap/Stack";
 const AppointmentList = () => {
   return (
-    <Stack direction="horizontal" gap={3}>
-      <div className="p-2">First item</div>
-      <div className="p-2 ms-auto">Second item</div>
-      <div className="p-2">Third item</div>
+    <Stack
+      direction="horizontal"
+      className="d-flex justify-content-around bg-secondary"
+      gap={3}
+    >
+      <div>
+        <div className="p-2">Patient Name</div>
+        <div className="p-2">Doctor Name</div>
+      </div>
+      <div>
+        <div className="p-2 ms-auto">Consulted</div>
+        <div className="p-2">Date</div>
+      </div>
+      <div className="p-2">Delete Icon</div>
     </Stack>
   );
 };

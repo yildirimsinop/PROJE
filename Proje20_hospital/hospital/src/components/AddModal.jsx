@@ -2,11 +2,15 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const AddModal = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [startDate, setStartDate] = useState(new Date());
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -19,10 +23,10 @@ const AddModal = () => {
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Paint Name</Form.Label>
+              <Form.Label>Patient Name</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="name@example.com"
+                placeholder="Enter Patient Name"
                 autoFocus
               />
             </Form.Group>
@@ -30,8 +34,16 @@ const AddModal = () => {
               className="mb-3"
               controlId="exampleForm.ControlTextarea1"
             >
-              <Form.Label>Example textarea</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Label>Choose Date</Form.Label>
+              <br />
+              <DatePicker
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                showTimeSelect
+                timeFormat="HH:mm"
+                timeIntervals={15}
+                dateFormat="MMMM d, yyyy h:mm aa"
+              />
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -47,4 +59,5 @@ const AddModal = () => {
     </>
   );
 };
+
 export default AddModal;
