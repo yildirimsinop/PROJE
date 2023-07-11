@@ -6,23 +6,28 @@ import { appointmentData, doctorData } from "../helpers/data";
 const Home = () => {
   return (
     <>
-      <h1 form control text-align-center>
-        HOSPITAL
-      </h1>
-      <h3>OUR DOCTORS</h3>
-      <Doctors />
-      <AddModal />
-      <AppointmentList />
+      <div>
+        <h1 form control text-align-center>
+          HOSPITAL
+        </h1>
+        <h3>OUR DOCTORS</h3>
+        <Doctors />
+        <AddModal />
+        <AppointmentList />
+      </div>
 
-      <h3>Doctors List</h3>
-      {doctorData.map((item) => (
-        <Doctors key={item.id} {...item} />
-      ))}
-
-      <h3>Appointment List</h3>
-      {appointmentData.map((item) => (
-        <AppointmentList key={item.id} {...item} />
-      ))}
+      <div>
+        <h3>Doctors List</h3>
+        {doctorData.map((item) => (
+          <Doctors key={item.id} {...item} />
+        ))}
+      </div>
+      <div>
+        <h3>Appointment List</h3>
+        {appointmentData.map((item) => (
+          <AppointmentList key={item.id} {...item} />
+        ))}
+      </div>
     </>
   );
 };
