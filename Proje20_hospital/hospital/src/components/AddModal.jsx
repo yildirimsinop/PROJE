@@ -14,14 +14,14 @@ const AddModal = () => {
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Appointment</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Paint Name</Form.Label>
               <Form.Control
-                type="email"
+                type="text"
                 placeholder="name@example.com"
                 autoFocus
               />
