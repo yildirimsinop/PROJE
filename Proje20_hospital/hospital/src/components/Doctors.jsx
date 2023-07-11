@@ -1,12 +1,12 @@
 import Card from "react-bootstrap/Card";
 
-const Doctors = () => {
+const Doctors = ({ id, name, dep, img }) => {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="./img/myImage.jpg" />
       <Card.Body>
-        <Card.Title> Title</Card.Title>
-        <Card.Text>depart</Card.Text>
+        <Card.Title> {name}</Card.Title>
+        <Card.Text>{dep}</Card.Text>
       </Card.Body>
     </Card>
   );
