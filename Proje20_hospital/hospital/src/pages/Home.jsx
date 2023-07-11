@@ -1,3 +1,4 @@
+import AddModal from "../components/AddModal";
 import AppointmentList from "../components/AppointmentList";
 import Doctors from "../components/Doctors";
 
@@ -10,6 +11,7 @@ const Home = () => {
       <h3>OUR DOCTORS</h3>
       <Doctors />;
       <AppointmentList />
+      <AddModal />
     </>
   );
 };
