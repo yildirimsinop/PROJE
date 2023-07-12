@@ -5,20 +5,20 @@ import Modal from "react-bootstrap/Modal";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const AddModal = () => {
-  const [show, setShow] = useState(false);
+const AddModal = ({ name, show, setShow }) => {
+  // const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
   const [startDate, setStartDate] = useState(new Date());
-
+  console.log(name);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+      {/* <Button variant="primary" onClick={handleShow}> */}
+      {/* Launch demo modal */}
+      {/* </Button> */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Appointment</Modal.Title>
+          <Modal.Title>Appointment {name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
