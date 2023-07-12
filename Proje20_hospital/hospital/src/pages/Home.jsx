@@ -1,33 +1,35 @@
+import { Container, Row, Col } from "react-bootstrap";
 import AddModal from "../components/AddModal";
 import AppointmentList from "../components/AppointmentList";
 import Doctors from "../components/Doctors";
 import { appointmentData, doctorData } from "../helpers/data";
+import "../App.css";
 
 const Home = () => {
   return (
     <>
-      <div>
-        <h1 form control text-align-center>
-          HOSPITAL
-        </h1>
-        <h3>OUR DOCTORS</h3>
-        <Doctors />
-        <AddModal />
-        <AppointmentList />
-      </div>
+      <h1> HOSPITAL </h1>
+      <h3>OUR DOCTORS</h3>
+      <Doctors />
+      <AddModal />
+      <AppointmentList />
 
-      <div>
+      <Container>
         <h3>Doctors List</h3>
-        {doctorData.map((item) => (
-          <Doctors key={item.id} {...item} />
-        ))}
-      </div>
-      <div>
+        <Row>
+          {doctorData.map((item) => (
+            <Col xs={6} md={4} lg={3} key={item.id} className="mb-3 doctor-col">
+              <Doctors {...item} />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+      <Container>
         <h3>Appointment List</h3>
         {appointmentData.map((item) => (
           <AppointmentList key={item.id} {...item} />
         ))}
-      </div>
+      </Container>
     </>
   );
 };
