@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Proje19_horoscope/static/css/main.992b7cca.css",
-    "main.js": "/Proje19_horoscope/static/js/main.3602941e.js",
-    "static/media/logo.png": "/Proje19_horoscope/static/media/logo.d6c42622bddf5a8e7575.png",
-    "index.html": "/Proje19_horoscope/index.html",
-    "main.992b7cca.css.map": "/Proje19_horoscope/static/css/main.992b7cca.css.map",
-    "main.3602941e.js.map": "/Proje19_horoscope/static/js/main.3602941e.js.map"
+    "main.css": "/Project/Proje19_horoscope/static/css/main.992b7cca.css",
+    "main.js": "/Project/Proje19_horoscope/static/js/main.a8e1f50e.js",
+    "static/media/logo.png": "/Project/Proje19_horoscope/static/media/logo.d6c42622bddf5a8e7575.png",
+    "index.html": "/Project/Proje19_horoscope/index.html",
+    "main.992b7cca.css.map": "/Project/Proje19_horoscope/static/css/main.992b7cca.css.map",
+    "main.a8e1f50e.js.map": "/Project/Proje19_horoscope/static/js/main.a8e1f50e.js.map"
   },
   "entrypoints": [
     "static/css/main.992b7cca.css",
-    "static/js/main.3602941e.js"
+    "static/js/main.a8e1f50e.js"
   ]
 }
