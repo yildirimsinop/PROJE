@@ -1,9 +1,14 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header";
+import Question from "./components/Question";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
+    <div>
+      <Header />
+      <Question />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
