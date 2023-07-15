@@ -1,7 +1,8 @@
 /* App.css */
-
 body {
-  font-family: Arial, sans-serif; /* Yazı tipini değiştirir */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; /* Yazı tipini değiştirir */
+  color: #ff0000;
+  margin: 2rem;
 }
 
 .mb-3 {
@@ -9,12 +10,16 @@ body {
 }
 
 .accordion {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Gölge ekler */
+  margin-top: 3rem;
+  box-shadow: 15px 15px 10px rgba(170, 80, 80, 0.8); /* Gölge ekler */
+  padding: 3rem;
+  background-color: beige;
+  border-radius: none;
 }
 
 .accordion .accordion-header {
   color: #ff0000; /* Soruların rengini kırmızı yapar */
-  font-size: 1.5em; /* Soruların boyutunu büyütür */
+  font-size: 4em; /* Soruların boyutunu büyütür */
   text-transform: uppercase; /* Soruların hepsini büyük harf yapar */
 }
 
@@ -22,4 +27,31 @@ body {
   color: #ffffff; /* Yazı rengini beyaz yapar */
   font-size: 1.2em; /* Yazı boyutunu büyütür */
   background-color: #000000; /* Accordion body'nin arka plan rengini siyah yapar */
+}
+
+h1 {
+  background-color: aqua;
+  padding: 2rem;
+}
+
+.accordion .card {
+  border: none;
+}
+
+.accordion .card-header,
+.accordion .card-body {
+  border: none;
+}
+
+.no-border {
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.accordion {
+  margin-top: 3rem;
+  box-shadow: 15px 15px 10px rgba(170, 80, 80, 0.8); /* Gölge ekler */
+  padding: 3rem;
+  background-color: transparent; /* Arka plan rengini şeffaflaştırır */
+  border-radius: none;
 }
