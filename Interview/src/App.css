@@ -1,0 +1,25 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif; /* Yazı tipini değiştirir */
+}
+
+.mb-3 {
+  width: 100%; /* Kutuyu genişletir */
+}
+
+.accordion {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Gölge ekler */
+}
+
+.accordion .accordion-header {
+  color: #ff0000; /* Soruların rengini kırmızı yapar */
+  font-size: 1.5em; /* Soruların boyutunu büyütür */
+  text-transform: uppercase; /* Soruların hepsini büyük harf yapar */
+}
+
+.accordion .accordion-body {
+  color: #ffffff; /* Yazı rengini beyaz yapar */
+  font-size: 1.2em; /* Yazı boyutunu büyütür */
+  background-color: #000000; /* Accordion body'nin arka plan rengini siyah yapar */
+}
