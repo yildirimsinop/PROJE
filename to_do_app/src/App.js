@@ -1,9 +1,13 @@
+import Header from "./component/Header";
+import TodoList from "./component/TodoList";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <Header />
+      <TodoList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
