@@ -1,4 +1,4 @@
-// ProductList.js
+import React from "react";
 import ProductDetails from "./ProductDetails";
 import { useState } from "react";
 
@@ -15,7 +15,11 @@ const ProductList = ({ products }) => {
     <div>
       {products.map((product, index) => (
         <div key={index} onClick={() => handleProductClick(product)}>
-          <img src={product.image} alt={product.title} />
+          <img
+            className="product-image"
+            src={product.image}
+            alt={product.title}
+          />
         </div>
       ))}
       {showDetails && (

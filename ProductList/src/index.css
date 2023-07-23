@@ -29,3 +29,9 @@ h1 {
 body {
   background-color: pink;
 }
+
+.product-image {
+  margin-left: 15rem;
+  width: 40%; /* istediğiniz genişliği belirleyin */
+  height: auto; /* yüksekliği otomatik olarak ayarlayın */
+}
