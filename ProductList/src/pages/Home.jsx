@@ -1,53 +1,29 @@
 import React, { useEffect, useState } from "react";
 import Header from "../components/Header";
-import ProductCard from "../components/ProductCard";
+import ProductList from "../components/ProductList";
 import axios from "axios";
 
 const Home = () => {
-  const [product, UseProduct] = useState([]);
-  const [category, UseCategory] = useState([]);
-
-  const dataProduct = async () => {
-    const dataUrl = " https://fakestoreapi.com/products";
-
-    try {
-      // const res = await axios(dataUrl)
-      // setTutorials(res.data)
-      const { data } = await axios.get(dataUrl);
-      UseProduct(data);
-    } catch (error) {
-      console.log(error);
-    }
-    console.log({ dataProduct });
-  };
+  const [products, setProducts] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
 
   useEffect(() => {
-    dataProduct();
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((response) => setProducts(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
-  const categoryData = async () => {
-    const categoryUrl = " https://fakestoreapi.com/products/categories";
+  const filteredProducts =
+    selectedCategory === "ALL"
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
-    try {
-      // const res = await axios(categoryUrl)
-      // setTutorials(res.data)
-      const { category } = await axios.get(categoryUrl);
-      UseCategory(category);
-    } catch (error) {
-      console.log(error);
-    }
-    console.log({ category });
-  };
-
-  useEffect(() => {
-    categoryData();
-  }, []);
   return (
     <div>
-      <Header dataProduct={dataProduct} />
-      <ProductCard categoryData={categoryData} />
+      <Header setSelectedCategory={setSelectedCategory} />
+      <ProductList products={filteredProducts} />
     </div>
   );
 };
-
 export default Home;
