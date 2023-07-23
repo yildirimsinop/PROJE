@@ -44,8 +44,8 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <Header dataProduct={dataProduct} />
-      <ProductCard categoryData={categoryData} />
+      <Header />
+      <ProductCard dataProduct={dataProduct} />
     </div>
   );
 };
