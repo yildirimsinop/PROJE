@@ -1,29 +1,52 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import "../../src/index.css"; // custom styles
 
-const Header = ({ setSelectedCategory }) => {
-  const categories = [
-    "ALL",
-    "ELECTRONICS",
-    "JEWELERY",
-    "MEN'S CLOTHING",
-    "WOMEN'S CLOTHING",
-  ];
-
+const Header = ({ dataProduct }) => {
+  console.log(dataProduct.value);
   return (
     <div>
       <h1 className="text-align-center header-title">Products List</h1>
       <Container className="header-container">
-        {categories.map((category) => (
-          <div
-            key={category}
-            className="header-link"
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </div>
-        ))}
+        <div
+          className="header-link"
+          onClick={() => {
+            /* Handle ALL click here */
+          }}
+        >
+          ALL
+        </div>
+        <div
+          className="header-link"
+          onClick={() => {
+            /* Handle ELECTRONICS click here */
+          }}
+        >
+          ELECTRONICS
+        </div>
+        <div
+          className="header-link"
+          onClick={() => {
+            /* Handle JEWELERY click here */
+          }}
+        >
+          JEWELERY
+        </div>
+        <div
+          className="header-link"
+          onClick={() => {
+            /* Handle MEN'S CLOTHING click here */
+          }}
+        >
+          MEN'S CLOTHING
+        </div>
+        <div
+          className="header-link"
+          onClick={() => {
+            /* Handle WOMEN'S CLOTHING click here */
+          }}
+        >
+          WOMEN'S CLOTHING
+        </div>
       </Container>
     </div>
   );

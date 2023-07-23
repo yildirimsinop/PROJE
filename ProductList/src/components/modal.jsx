@@ -1,13 +1,7 @@
 import React from "react";
 
-const ProductDetails = ({ product, onClose }) => {
-  return (
-    <div>
-      <h2>{product.title}</h2>
-      <p>{product.description}</p>
-      <button onClick={onClose}>Close</button>
-    </div>
-  );
+const Modal = () => {
+  return <div></div>;
 };
 
-export default ProductDetails;
+export default Modal;
