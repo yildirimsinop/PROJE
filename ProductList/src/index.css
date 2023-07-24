@@ -93,7 +93,6 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: normal;
-  transform: none;
 }
 .cards:hover h2 {
   display: block;
