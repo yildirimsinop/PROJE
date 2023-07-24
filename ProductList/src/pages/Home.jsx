@@ -4,48 +4,62 @@ import ProductCard from "../components/ProductCard";
 import axios from "axios";
 
 const Home = () => {
-  const [product, UseProduct] = useState([]);
-  const [category, UseCategory] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [activeCategory, setActiveCategory] = useState(null);
 
-  const dataProduct = async () => {
-    const dataUrl = " https://fakestoreapi.com/products";
-
+  const fetchProducts = async () => {
     try {
-      // const res = await axios(dataUrl)
-      // setTutorials(res.data)
-      const { data } = await axios.get(dataUrl);
-      UseProduct(data);
+      const { data } = await axios.get("https://fakestoreapi.com/products");
+      setProducts(data);
     } catch (error) {
       console.log(error);
     }
-    console.log({ dataProduct });
   };
 
   useEffect(() => {
-    dataProduct();
+    fetchProducts();
   }, []);
 
-  const categoryData = async () => {
-    const categoryUrl = " https://fakestoreapi.com/products/categories";
-
+  const fetchCategories = async () => {
     try {
-      // const res = await axios(categoryUrl)
-      // setTutorials(res.data)
-      const { category } = await axios.get(categoryUrl);
-      UseCategory(category);
+      const { data } = await axios.get(
+        "https://fakestoreapi.com/products/categories"
+      );
+      setCategories(data);
     } catch (error) {
       console.log(error);
     }
-    console.log({ category });
   };
 
   useEffect(() => {
-    categoryData();
+    fetchCategories();
   }, []);
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+  };
+
+  let filteredProducts;
+
+  if (activeCategory) {
+    // Eğer bir kategori seçilmişse, sadece o kategoriye ait ürünleri filtrele
+    filteredProducts = products.filter(
+      (product) => product.category === activeCategory
+    );
+  } else {
+    // Eğer bir kategori seçilmemişse, tüm ürünleri kullan
+    filteredProducts = products;
+  }
+
   return (
     <div>
-      <Header />
-      <ProductCard dataProduct={dataProduct} />
+      <Header categories={categories} onCategoryClick={handleCategoryClick} />
+      <div className="product-container">
+        {filteredProducts.map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </div>
     </div>
   );
 };
