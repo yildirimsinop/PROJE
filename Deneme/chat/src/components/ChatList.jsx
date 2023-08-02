@@ -4,12 +4,12 @@ import { useChat } from "../context/ChatContext";
 import ChatItem from "./ChatItem";
 
 function ChatList() {
-  const { messages } = useChat();
+  const { data } = useChat();
   return (
     <div className={styles.chatlist}>
       <div>
-        {messages.map((item, key) => (
-          <ChatItem key={key} item={item} />
+        {data.map((item) => (
+          <ChatItem key={item.id} item={item} />
         ))}
       </div>
     </div>

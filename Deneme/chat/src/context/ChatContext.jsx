@@ -1,16 +1,12 @@
-import { createContext, useState, useContext } from "react";
+import { createContext, useContext } from "react";
+import data from "./data";
 
 const ChatContext = createContext();
+console.log(data);
 
 export const ChatProvider = ({ children }) => {
-  const [messages, setMessages] = useState([
-    { messages: "selam" },
-    { messages: "naber?" },
-  ]);
-
   const values = {
-    messages,
-    setMessages,
+    data,
   };
 
   return <ChatContext.Provider value={values}>{children}</ChatContext.Provider>;
