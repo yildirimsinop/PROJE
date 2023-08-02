@@ -1,9 +1,13 @@
+import "./App.css";
+import { ChatProvider } from "./context/ChatContext";
+import Container from "./components/Container";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
-    </div>
-  )
+    <ChatProvider>
+      <Container />
+    </ChatProvider>
+  );
 }
 
-export default App
+export default App;
