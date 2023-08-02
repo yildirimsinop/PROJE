@@ -5,8 +5,8 @@ import ChatList from "./ChatList";
 const Container = () => {
   return (
     <div>
-      <ChatForm />
       <ChatList />
+      <ChatForm />
     </div>
   );
 };
