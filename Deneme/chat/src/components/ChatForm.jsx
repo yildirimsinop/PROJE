@@ -1,26 +1,15 @@
-import { useState } from "react";
+// import { useState } from "react";
 import styles from "./styles.module.css";
 
-const ChatForm = () => {
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(message);
-
-    setMessage("");
-  };
-
+const ChatForm = ({ message, setMessage, handleSubmit }) => {
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          className={styles.textInput}
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-      </form>
-    </div>
+    <form onSubmit={handleSubmit}>
+      <input
+        className={styles.textInput}
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+    </form>
   );
 };
 
