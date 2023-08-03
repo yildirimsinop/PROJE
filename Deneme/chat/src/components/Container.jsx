@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ChatForm from "./ChatForm";
 import ChatList from "./ChatList";
 
 const Container = () => {
-
   const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
@@ -11,16 +10,17 @@ const Container = () => {
     console.log(message);
 
     setMessage("");
+  };
 
   return (
     <div className="App">
       <ChatList />
 
-     <ChatForm message={message}
-     setMessage= {setMessage}
-     handleSubmit= {handleSubmit}
-     />
-    
+      <ChatForm
+        message={message}
+        setMessage={setMessage}
+        handleSubmit={handleSubmit}
+      />
     </div>
   );
 };
