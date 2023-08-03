@@ -1,10 +1,11 @@
 import styles from "./styles.module.css";
 
-function ChatItem({ item }) {
+function ChatItem({ message }) {
   return (
     <div className={`${styles.chatItem}`}>
-      {`${item.id}. `}
-      {item.title}
+      {/* {`${item.id}. `} */}
+
+      {message}
     </div>
   );
 }
