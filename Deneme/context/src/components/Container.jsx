@@ -3,7 +3,7 @@ import Button from "./Button";
 import Header from "./Header";
 import ThemeContext from "../context/ThemeContext";
 
-const Container = () => {
+function Container() {
   const { theme } = useContext(ThemeContext);
   console.log(theme);
   return;
@@ -12,6 +12,6 @@ const Container = () => {
     <hr />
     <Button />
   </div>;
-};
+}
 
 export default Container;

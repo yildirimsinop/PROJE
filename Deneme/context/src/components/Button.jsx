@@ -12,7 +12,6 @@ function Button() {
       <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
         Change Theme
       </button>
-      ;
     </div>
   );
 }
