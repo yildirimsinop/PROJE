@@ -1,7 +1,11 @@
-import React from "react";
+import { useContext } from "react";
 
-const Button = () => {
-  return <div></div>;
-};
+import ThemeContext from "../context/ThemeContext";
+
+function Button() {
+  const data = useContext(ThemeContext);
+  //   console.log(data);
+  return <div>button ({data}) </div>;
+}
 
 export default Button;
