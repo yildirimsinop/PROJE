@@ -1,15 +1,12 @@
 import ThemeContext, { ThemeProvider } from "./context/ThemeContext";
 import "./App.css";
-import Button from "./components/Button";
-import Header from "./components/Header";
+import Container from "./components/Container";
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        <Button />
-        <hr />
-        <Header />
+        <Container />
       </ThemeProvider>
     </>
   );
