@@ -1,19 +1,15 @@
+import ThemeContext from "./context/ThemeContext";
+import "./App.css";
+import Button from "./components/Button";
 
-import User from "./components/User"
-
-const friends = [... ];
 function App() {
   return (
     <>
-      <User 
-      name= "Mehmet" 
-      surname = "yilmaz" 
-      isLoggedIn = {true} 
-      age= {29}
-      friends = {friends}
-      />
+      <ThemeContext.Provider value="dark">
+        <Button />
+      </ThemeContext.Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
