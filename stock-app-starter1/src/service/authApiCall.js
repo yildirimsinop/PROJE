@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const login = async (userData) => {
-  const BASE_URL = "https://console-14104.fullstack.clarusway.com";
+  const BASE_URL = "https://14104.fullstack.clarusway.com";
   try {
     const { data } = await axios.post(
       `${BASE_URL}/account/auth/login/`,
