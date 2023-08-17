@@ -11,7 +11,7 @@ import { Button } from "@mui/material";
 import { Formik, Form } from "formik";
 
 import { object, string } from "yup";
-import { login } from "../service/authApiCall";
+import { login } from "../hooks/authApiCall";
 
 const Login = () => {
   const navigate = useNavigate();
