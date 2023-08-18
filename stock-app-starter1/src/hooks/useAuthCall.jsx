@@ -16,6 +16,7 @@ import {
   fetchStart,
   loginSuccess,
   logoutSuccess,
+  registerSuccess,
 } from "../features/authSlice";
 
 const useAuthCall = () => {
@@ -38,7 +39,6 @@ const useAuthCall = () => {
       dispatch(fetchFail());
       toastSuccessNotify(error.response.data.non_field_errors[0]);
     }
-    console.log(import.meta.env.VITE_BASE_URL);
   };
 
   const logout = async () => {
@@ -55,7 +55,25 @@ const useAuthCall = () => {
       toastSuccessNotify("Logout Failed");
     }
   };
-  return { login, logout };
+
+  const register = async (userData) => {
+    dispatch(fetchStart());
+
+    try {
+      const { data } = await axios.post(
+        `${import.meta.env.VITE_BASE_URL}/account/auth/register/`,
+        userData
+      );
+      dispatch(registerSuccess(data));
+      toastSuccessNotify("register Successful");
+      navigate("/stock");
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+      toastSuccessNotify(error.response.data.non_field_errors[0]);
+    }
+  };
+  return { login, logout, register };
 };
 
 export default useAuthCall;
