@@ -1,7 +1,7 @@
 import React from "react";
 
 const Puchases = () => {
-  return <div></div>;
+  return <div>Puchases</div>;
 };
 
 export default Puchases;
