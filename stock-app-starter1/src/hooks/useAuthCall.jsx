@@ -70,7 +70,7 @@ const useAuthCall = () => {
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());
-      toastSuccessNotify(error.response.data.non_field_errors[0]);
+      toastSuccessNotify("Register Failed");
     }
   };
   return { login, logout, register };
