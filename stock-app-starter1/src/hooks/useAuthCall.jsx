@@ -11,7 +11,12 @@ import axios from "axios";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { fetchFail, fetchStart, loginSuccess } from "../features/authSlice";
+import {
+  fetchFail,
+  fetchStart,
+  loginSuccess,
+  logoutSuccess,
+} from "../features/authSlice";
 
 const useAuthCall = () => {
   const navigate = useNavigate();
@@ -36,7 +41,22 @@ const useAuthCall = () => {
     }
   };
 
-  return { login };
+  const logout = async () => {
+    const BASE_URL = "https://14104.fullstack.clarusway.com";
+    dispatch(fetchStart());
+
+    try {
+      await axios.post(`${BASE_URL}/account/auth/logout/`);
+      dispatch(logoutSuccess());
+      toastSuccessNotify("Logout Successful");
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+      toastSuccessNotify("Logout Failed");
+    }
+  };
+  return { login, logout };
 };
 
 export default useAuthCall;
