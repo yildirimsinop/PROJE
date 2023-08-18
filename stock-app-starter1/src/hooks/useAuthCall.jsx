@@ -38,6 +38,7 @@ const useAuthCall = () => {
       dispatch(fetchFail());
       toastSuccessNotify(error.response.data.non_field_errors[0]);
     }
+    console.log(import.meta.env.VITE_BASE_URL);
   };
 
   const logout = async () => {
