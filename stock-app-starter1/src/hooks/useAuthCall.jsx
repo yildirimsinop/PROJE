@@ -37,7 +37,7 @@ const useAuthCall = () => {
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());
-      toastSuccessNotify("Login Failed");
+      toastSuccessNotify(error.response.data.non_field_errors[0]);
     }
   };
 
