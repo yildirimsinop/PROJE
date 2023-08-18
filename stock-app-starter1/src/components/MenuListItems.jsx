@@ -6,26 +6,26 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
+import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
 
-const icon = [{
-    icon:<SpaceDashboardIcon/>,
-    title:"Dashboard",
-    url:,
-}]
+const icons = [
+  {
+    icon: <SpaceDashboardIcon />,
+    title: "Dashboard",
+    url: "/stock/",
+  },
+];
 
 const MenuListItems = () => {
   return (
     <div>
       {" "}
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+        {icons.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
         ))}
