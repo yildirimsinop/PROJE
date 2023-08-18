@@ -11,9 +11,12 @@ import { Button } from "@mui/material";
 import { Formik, Form } from "formik";
 
 import { object, string } from "yup";
-import { login } from "../hooks/authApiCall";
+// import { login } from "../hooks/useAuthCall";
+import useAuthCall from "../hooks/useAuthCall";
 
 const Login = () => {
+  const { login } = useAuthCall();
+
   const navigate = useNavigate();
 
   //? harici validasyon semasi
