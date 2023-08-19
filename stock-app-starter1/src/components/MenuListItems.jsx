@@ -52,6 +52,8 @@ const icons = [
 
 const MenuListItems = () => {
   const navigate = useNavigate();
+
+  //? window.location.href = item.url
   return (
     <div>
       <List>
@@ -59,7 +61,11 @@ const MenuListItems = () => {
           <ListItem
             key={index}
             disablePadding
-            onClick={() => navigate(item.url)}
+            onClick={() => {
+              item.url.includes("http" || "wwww")
+                ? window.open(item.url, "_blank")
+                : navigate(item.url);
+            }}
             sx={{
               color: "white",
               ".MuiSvgIcon-root": { color: "white" },
