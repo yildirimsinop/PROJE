@@ -5,7 +5,7 @@ import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
-import Purchases from "../pages/Puchases";
+import Purchases from "../pages/Purchases";
 import Sales from "../pages/Sales";
 import Products from "../pages/Products";
 import Firms from "../pages/Firms";
