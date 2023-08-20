@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const stockSlice = createSlice({
-  name: "auth",
+  name: "stock",
 
   initialState: {
     loading: false,
@@ -21,7 +21,11 @@ const stockSlice = createSlice({
 
     getFirmsSuccess: (state, { payload }) => {
       state.loading = false;
+      state.firms = payload;
+    },
 
+    getBrandsSuccess: (state, { payload }) => {
+      state.loading = false;
       state.firms = payload;
     },
 
@@ -32,5 +36,6 @@ const stockSlice = createSlice({
   },
 });
 
-export const { fetchStart, fetchFail, getFirmsSuccess } = stockSlice.actions;
+export const { fetchStart, fetchFail, getFirmsSuccess, getBrandsSuccess } =
+  stockSlice.actions;
 export default stockSlice.reducer;
