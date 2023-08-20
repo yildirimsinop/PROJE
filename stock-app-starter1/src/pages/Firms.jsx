@@ -2,12 +2,13 @@ import { Button, Typography } from "@mui/material";
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { fetchFail, fetchStart } from "../features/authSlice";
 import { useDispatch } from "react-redux";
+import { fetchFail, fetchStart, getFirmsSuccess } from "../features/stockSlice";
 
 const Firms = () => {
   const { token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const { firms } = useSelector((state) => state.stock);
 
   const getFirms = async () => {
     dispatch(fetchStart());
@@ -19,8 +20,7 @@ const Firms = () => {
         }
       );
 
-      dispatch(fetFirmSuccess(data));
-
+      dispatch(getFirmsSuccess(data));
       console.log(data);
     } catch (error) {
       dispatch(fetchFail());
