@@ -27,18 +27,29 @@ const Firms = () => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    getFirms();
-  }, []);
 
-  return (
-    <div>
-      <Typography variant="h4" color={"error"} mb={3}>
-        Firms
-      </Typography>
-      <Button variant="contained">NEW FIRM</Button>
-    </div>
-  );
+  const getSales = async () => {
+    const { data } = await axios(
+      `${import.meta.env.VITE_BASE_URL}/stock/sales/`,
+      {
+        headers: { Authorization: `Token ${token} ` },
+      }
+    );
+
+    useEffect(() => {
+      getFirms();
+    }, []);
+
+    console.log(firms);
+
+    return (
+      <div>
+        <Typography variant="h4" color={"error"} mb={3}>
+          Firms
+        </Typography>
+        <Button variant="contained">NEW FIRM</Button>
+      </div>
+    );
+  };
 };
-
 export default Firms;
