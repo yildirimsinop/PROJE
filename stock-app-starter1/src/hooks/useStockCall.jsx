@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { fetchFail, fetchStart, getFirmsSuccess } from "../features/stockSlice";
+import { fetchFail, fetchStart, getStockSuccess } from "../features/stockSlice";
 
 const useStockCall = () => {
   const { token } = useSelector((state) => state.auth);
@@ -24,42 +24,42 @@ const useStockCall = () => {
       console.log(error);
     }
   };
-  const getFirms = async () => {
-    dispatch(fetchStart());
-    try {
-      const { data } = await axios(
-        `${import.meta.env.VITE_BASE_URL}/stock/firms/`,
-        {
-          headers: { Authorization: `Token ${token} ` },
-        }
-      );
+  // const getFirms = async () => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     const { data } = await axios(
+  //       `${import.meta.env.VITE_BASE_URL}/stock/firms/`,
+  //       {
+  //         headers: { Authorization: `Token ${token} ` },
+  //       }
+  //     );
 
-      dispatch(getFirmsSuccess(data));
-      console.log(data);
-    } catch (error) {
-      dispatch(fetchFail());
-      console.log(error);
-    }
-  };
+  //     dispatch(getFirmsSuccess(data));
+  //     console.log(data);
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     console.log(error);
+  //   }
+  // };
 
-  const getSales = async () => {
-    dispatch(fetchStart());
-    try {
-      const { data } = await axios(
-        `${import.meta.env.VITE_BASE_URL}/stock/sales/`,
-        {
-          headers: { Authorization: `Token ${token} ` },
-        }
-      );
-      dispatch(getSalesSuccess(data));
-      console.log(data);
-    } catch (error) {
-      dispatch(fetchFail());
-      console.log(error);
-    }
-  };
+  // const getSales = async () => {
+  //   dispatch(fetchStart());
+  //   try {
+  //     const { data } = await axios(
+  //       `${import.meta.env.VITE_BASE_URL}/stock/sales/`,
+  //       {
+  //         headers: { Authorization: `Token ${token} ` },
+  //       }
+  //     );
+  //     dispatch(getSalesSuccess(data));
+  //     console.log(data);
+  //   } catch (error) {
+  //     dispatch(fetchFail());
+  //     console.log(error);
+  //   }
+  // };
 
-  return { getFirms };
+  return { getStockData };
 };
 
 export default useStockCall;
