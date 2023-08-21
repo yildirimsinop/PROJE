@@ -19,15 +19,23 @@ const stockSlice = createSlice({
       state.error = false;
     },
 
-    getFirmsSuccess: (state, { payload }) => {
+    getStockSuccess: (state, { payload: { data, url } }) => {
       state.loading = false;
-      state.firms = payload;
+      state[url] = data;
     },
+    // getFirmsSuccess: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.firms = payload;
+    // },
 
-    getBrandsSuccess: (state, { payload }) => {
-      state.loading = false;
-      state.firms = payload;
-    },
+    // getBrandsSuccess: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.firms = payload;
+    // },
+    // getSalesSuccess: (state, { payload }) => {
+    //   state.loading = false;
+    //   state.firms = payload;
+    // },
 
     fetchFail: (state) => {
       state.loading = false;
