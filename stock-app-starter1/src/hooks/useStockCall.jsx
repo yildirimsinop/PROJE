@@ -69,7 +69,6 @@ const useStockCall = () => {
       toastSuccessNotify(`${url}succesfuly deleted`);
 
       getStockData(url);
-      console.log(data);
     } catch (error) {
       dispatch(fetchFail());
       toastErrorNotify(`${url}can not be deleted`);
