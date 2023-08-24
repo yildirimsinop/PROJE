@@ -1,57 +1,16 @@
-import axios from "axios";
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { fetchFail, fetchStart, getStockSuccess } from "../features/stockSlice";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
+import useAxios from "./useAxios";
 
-// const getFirms = async () => {
-//   dispatch(fetchStart());
-//   try {
-//     const { data } = await axios(
-//       `${import.meta.env.VITE_BASE_URL}/stock/firms/`,
-//       {
-//         headers: { Authorization: `Token ${token} ` },
-//       }
-//     );
-
-//     dispatch(getFirmsSuccess(data));
-//     console.log(data);
-//   } catch (error) {
-//     dispatch(fetchFail());
-//     console.log(error);
-//   }
-// };
-
-// const getSales = async () => {
-//   dispatch(fetchStart());
-//   try {
-//     const { data } = await axios(
-//       `${import.meta.env.VITE_BASE_URL}/stock/sales/`,
-//       {
-//         headers: { Authorization: `Token ${token} ` },
-//       }
-//     );
-//     dispatch(getSalesSuccess(data));
-//     console.log(data);
-//   } catch (error) {
-//     dispatch(fetchFail());
-//     console.log(error);
-//   }
-// };
 const useStockCall = () => {
-  const { token } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const { axiosWithToken } = useAxios();
 
   const getStockData = async (url) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axios(
-        `${import.meta.env.VITE_BASE_URL}/stock/${url}/`,
-        {
-          headers: { Authorization: `Token ${token} ` },
-        }
-      );
-
+      const { data } = await axiosWithToken(`/stock/${url}/`);
       dispatch(getStockSuccess({ data, url }));
       console.log(data);
     } catch (error) {
@@ -63,9 +22,7 @@ const useStockCall = () => {
   const deleteStockData = async (url, id) => {
     dispatch(fetchStart());
     try {
-      await axios(`${import.meta.env.VITE_BASE_URL}/stock/${url}/{id}/`, {
-        headers: { Authorization: `Token ${token} ` },
-      });
+      await axiosWithToken.delete(`/stock/${url}/{id}/`);
       toastSuccessNotify(`${url}succesfuly deleted`);
 
       getStockData(url);

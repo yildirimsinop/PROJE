@@ -8,7 +8,11 @@ const useAxios = () => {
     baseURL: `${import.meta.env.VITE_BASE_URL}`,
     headers: { Authorization: `Token ${token}` },
   });
-  return { axiosWithToken };
+
+  const axiosPublic = axios.create({
+    baseURL: `${import.meta.env.VITE_BASE_URL}`,
+  });
+  return { axiosWithToken, axiosPublic };
 };
 
 export default useAxios;
