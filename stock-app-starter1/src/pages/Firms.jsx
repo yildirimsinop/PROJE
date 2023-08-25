@@ -1,9 +1,10 @@
-import { Button, Typography } from "@mui/material";
-import axios from "axios";
+import { Button, Typography, Grid } from "@mui/material";
+//import axios from "axios";
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+//import { useDispatch } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
+import FirmCard from "../components/FirmCard";
 
 const Firms = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -42,6 +43,14 @@ const Firms = () => {
         Firms
       </Typography>
       <Button variant="contained">NEW FIRM</Button>
+
+      <Grid container>
+        {firms?.map((firm) => (
+          <Grid item key={firm.id}>
+            <FirmCard firm={firm} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 };
