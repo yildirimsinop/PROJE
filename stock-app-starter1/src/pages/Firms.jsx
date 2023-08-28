@@ -1,6 +1,6 @@
 import { Button, Typography, Grid } from "@mui/material";
 //import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 //import { useDispatch } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
@@ -30,6 +30,9 @@ const Firms = () => {
   // };
   const { getStockData } = useStockCall();
   const { firms } = useSelector((state) => state.stock);
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   useEffect(() => {
     // getFirms();
@@ -43,9 +46,12 @@ const Firms = () => {
       <Typography variant="h4" color={"error"} mb={3}>
         Firms
       </Typography>
-      <Button variant="contained">NEW FIRM</Button>
+      <Button variant="contained" onClick={handleOpen}>
+        NEW FIRM
+      </Button>
+      <Button onClick={handleOpen}>Open modal</Button>
 
-      <FirmModal />
+      <FirmModal open={open} handleClose={handleClose} />
       <Grid container justifyContent={"center"} spacing={2}>
         {firms?.map((firm) => (
           <Grid item key={firm.id}>
