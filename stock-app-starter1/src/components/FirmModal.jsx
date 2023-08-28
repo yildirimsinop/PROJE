@@ -6,8 +6,10 @@ import TextField from "@mui/material/TextField";
 import Modal from "@mui/material/Modal";
 import { modalStyle } from "../styles/globalStyles";
 import { useState } from "react";
+import useStockCall from "../hooks/useStockCall";
 
 export default function FirmModal({ open, handleClose }) {
+  const { postStockData } = useStockCall();
   const [info, setInfo] = useState({
     name: "",
     phone: "",
@@ -18,6 +20,11 @@ export default function FirmModal({ open, handleClose }) {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    postStockData("firms", info);
   };
   return (
     <div>
@@ -31,6 +38,7 @@ export default function FirmModal({ open, handleClose }) {
           <Box
             sx={{ display: "flex", flexDirection: "column", gap: 2 }}
             component="form"
+            onSubmit={handleSubmit}
           >
             <TextField
               label="Firm Name"
@@ -43,6 +51,36 @@ export default function FirmModal({ open, handleClose }) {
               onChange={handleChange}
             />
 
+            <TextField
+              label="Phone"
+              name="phone"
+              id="phone"
+              type="tel"
+              variant="outlined"
+              value={info?.phone}
+              required
+              onChange={handleChange}
+            />
+            <TextField
+              label="Address"
+              name="address"
+              id="address"
+              type="text"
+              variant="outlined"
+              value={info?.address}
+              required
+              onChange={handleChange}
+            />
+            <TextField
+              label="Image"
+              name="image"
+              id="image"
+              type="url"
+              variant="outlined"
+              value={info?.image}
+              required
+              onChange={handleChange}
+            />
             <Button variant="contained" type="submit">
               Submit
             </Button>
