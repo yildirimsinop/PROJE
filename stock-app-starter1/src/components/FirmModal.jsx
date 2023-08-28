@@ -19,7 +19,7 @@ export default function FirmModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={modelStyle}>
+        <Box sx={modalStyle}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             Text in a modal
           </Typography>

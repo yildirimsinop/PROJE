@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 //import { useDispatch } from "react-redux";
 import useStockCall from "../hooks/useStockCall";
 import FirmCard from "../components/FirmCard";
+import FirmModal from "../components/FirmModal";
 
 const Firms = () => {
   // const { token } = useSelector((state) => state.auth);
@@ -44,6 +45,7 @@ const Firms = () => {
       </Typography>
       <Button variant="contained">NEW FIRM</Button>
 
+      <FirmModal />
       <Grid container justifyContent={"center"} spacing={2}>
         {firms?.map((firm) => (
           <Grid item key={firm.id}>
