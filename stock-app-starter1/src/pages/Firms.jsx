@@ -39,7 +39,7 @@ const Firms = () => {
     getStockData("firms");
   }, []);
 
-  console.log(firms);
+  // console.log(firms);
 
   return (
     <div>
@@ -49,7 +49,7 @@ const Firms = () => {
       <Button variant="contained" onClick={handleOpen}>
         NEW FIRM
       </Button>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen}></Button>
 
       <FirmModal open={open} handleClose={handleClose} />
       <Grid container justifyContent={"center"} spacing={2}>
