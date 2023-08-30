@@ -9,7 +9,7 @@ import EditIcon from "@mui/icons-material/Edit";
 import { btnStyle } from "../styles/globalStyles";
 import useStockCall from "../hooks/useStockCall";
 
-export default function FirmCard({ firm, handleOpen }) {
+export default function FirmCard({ firm, handleOpen, info, setInfo }) {
   const { deleteStockData } = useStockCall();
   return (
     <Card
