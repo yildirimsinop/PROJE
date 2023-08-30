@@ -41,7 +41,14 @@ export default function FirmCard({ firm, handleOpen, info, setInfo }) {
         {firm.phone}
       </Typography>
       <CardActions>
-        <EditIcon sx={btnStyle} onClick={handleOpen} />
+        <EditIcon
+          sx={btnStyle}
+          onClick={() => {
+            handleOpen();
+            setInfo(firm);
+          }}
+        />
+
         <DeleteOutlineIcon
           sx={btnStyle}
           onClick={() => deleteStockData("firms", firm.id)}
