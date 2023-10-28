@@ -1,41 +1,35 @@
-import Avatar from "@mui/material/Avatar";
-import Container from "@mui/material/Container";
-import Grid from "@mui/material/Grid";
-import Typography from "@mui/material/Typography";
-import LockIcon from "@mui/icons-material/Lock";
-import image from "../assets/result.svg";
-import { Link, useNavigate } from "react-router-dom";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
-import { Formik, Form } from "formik";
-
-import { object, string } from "yup";
-// import { login } from "../hooks/useAuthCall";
-import useAuthCall from "../hooks/useAuthCall";
+import Avatar from "@mui/material/Avatar"
+import Container from "@mui/material/Container"
+import Grid from "@mui/material/Grid"
+import Typography from "@mui/material/Typography"
+import LockIcon from "@mui/icons-material/Lock"
+import image from "../assets/result.svg"
+import { Link } from "react-router-dom"
+import Box from "@mui/material/Box"
+import TextField from "@mui/material/TextField"
+import Button from "@mui/material/Button"
+import { Formik, Form } from "formik"
+import { object, string } from "yup"
+// import { login } from "../hooks/useAuthCall"
+import useAuthCall from "../hooks/useAuthCall"
 
 const Login = () => {
-  const { login } = useAuthCall();
+  const { login } = useAuthCall()
 
-  const navigate = useNavigate();
-
-  //? harici validasyon semasi
+  //? harici validasyon şemasi
   const loginSchema = object({
     email: string()
-      .email("Please enter a valid email")
-      .required("This field is required."),
+      .email("Lutfen valid bir email giriniz")
+      .required("Bu alan zorunludur"),
     password: string()
-      .required("This field is required.")
-      .min(8, "At least 8 characters must be entered.")
-      .max(16, "A maximum 16 characters must be entered.")
-      .matches(/\d+/, "must be at least 1 digit.")
-      .matches(/[a-z]/, "must be at least 1 lowercase letter.")
-      .matches(/[A-Z]/, "must be at least 1 Uppercase letter.")
-      .matches(
-        /[!,?{}><%&$#£+-.]/,
-        "must contain at least 1 special character."
-      ),
-  });
+      .required("Bu alan zorunludur")
+      .min(8, "En az 8 karakter girilmelidir")
+      .max(16, "En fazla 16 karakter girilmelidir")
+      .matches(/\d+/, "En az bir rakam içermelidir.")
+      .matches(/[a-z]/, "En az bir küçük harf içermelidir.")
+      .matches(/[A-Z]/, "En az bir büyük harf içermelidir.")
+      .matches(/[!,?{}><%&$#£+-.]+/, "En az bir özel karekter içermelidir."),
+  })
 
   return (
     <Container maxWidth="lg">
@@ -78,10 +72,9 @@ const Login = () => {
             initialValues={{ email: "", password: "" }}
             validationSchema={loginSchema}
             onSubmit={(values, action) => {
-              //TODO login(values) POST islemi
-              login(values);
-              action.resetForm();
-              action.setSubmitting(false);
+              login(values)
+              action.resetForm()
+              action.setSubmitting(false)
             }}
           >
             {({ handleChange, handleBlur, values, touched, errors }) => (
@@ -131,7 +124,7 @@ const Login = () => {
         </Grid>
       </Grid>
     </Container>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

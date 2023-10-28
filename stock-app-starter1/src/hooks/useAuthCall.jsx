@@ -1,79 +1,102 @@
-// import axios from "axios";
-// import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
-// import { useNavigate } from "react-router-dom";
-// import { useDispatch } from "react-redux";
-// import { fetchFail, fetchStart, loginSuccess } from "../features/authSlice";
+// import axios from "axios"
+// import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
+// import { useNavigate } from "react-router-dom"
+// import { useDispatch } from "react-redux"
+// import { fetchFail, fetchStart, loginSuccess } from "../features/authSlice"
 
-// //? Bir hook sadece bir react component ve bir custom hook icerisinde cagrilabilir. Bir Js fonksiyonu icerisinde hook cagrilamaz.
+// // //? Bir hook sadece bir react component ve bir custom hook icersinde cagrilabilir. Bir Js fonksiyonu icerisinde hook cagiralamaz.
 
-import React from "react";
-import axios from "axios";
-import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+// export const login = async (userData) => {
+//   const navigate = useNavigate()
+//   const dispatch = useDispatch()
+
+//   const BASE_URL = "https://10001.fullstack.clarusway.com"
+
+//   dispatch(fetchStart())
+//   try {
+//     const { data } = await axios.post(
+//       `${BASE_URL}/account/auth/login/`,
+//       userData
+//     )
+//     dispatch(loginSuccess(data))
+//     toastSuccessNotify("login islemi basarili")
+//     navigate("/stock")
+//   } catch (error) {
+//     console.log(error)
+//     dispatch(fetchFail())
+//   }
+// }
+
+import axios from "axios"
+import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify"
+import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
 import {
   fetchFail,
   fetchStart,
   loginSuccess,
   logoutSuccess,
   registerSuccess,
-} from "../features/authSlice";
+} from "../features/authSlice"
 
 const useAuthCall = () => {
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const login = async (userData) => {
-    dispatch(fetchStart());
+    // const BASE_URL = "https://10001.fullstack.clarusway.com"
 
+    // console.log(import.meta.env.VITE_API_KEY)
+    // console.log(import.meta.env.VITE_API_KEY_PROD)
+
+    dispatch(fetchStart())
     try {
       const { data } = await axios.post(
         `${import.meta.env.VITE_BASE_URL}/account/auth/login/`,
         userData
-      );
-      dispatch(loginSuccess(data));
-      toastSuccessNotify("Login Successful");
-      navigate("/stock");
+      )
+      dispatch(loginSuccess(data))
+      toastSuccessNotify("login islemi basarili")
+      navigate("/stock")
     } catch (error) {
-      console.log(error);
-      dispatch(fetchFail());
-      toastSuccessNotify(error.response.data.non_field_errors[0]);
+      console.log(error.message)
+      dispatch(fetchFail())
+      toastErrorNotify(error.response.data.non_field_errors[0])
     }
-  };
+  }
 
   const logout = async () => {
-    dispatch(fetchStart());
-
+    dispatch(fetchStart())
     try {
-      await axios.post(`${import.meta.env.VITE_BASE_URL}/account/auth/logout/`);
-      dispatch(logoutSuccess());
-      toastSuccessNotify("Logout Successful");
-      navigate("/");
+      await axios.post(`${import.meta.env.VITE_BASE_URL}/account/auth/logout/`)
+      dispatch(logoutSuccess())
+      toastSuccessNotify("logout islemi basarili")
+      navigate("/")
     } catch (error) {
-      console.log(error);
-      dispatch(fetchFail());
-      toastSuccessNotify("Logout Failed");
+      console.log(error)
+      dispatch(fetchFail())
+      toastErrorNotify("Logout islemi basarisiz")
     }
-  };
+  }
 
   const register = async (userData) => {
-    dispatch(fetchStart());
-
+    dispatch(fetchStart())
     try {
       const { data } = await axios.post(
         `${import.meta.env.VITE_BASE_URL}/account/register/`,
         userData
-      );
-      dispatch(registerSuccess(data));
-      toastSuccessNotify("register Successful");
-      navigate("/stock");
+      )
+      dispatch(registerSuccess(data))
+      toastSuccessNotify("kayit islemi basarili")
+      navigate("/stock")
     } catch (error) {
-      console.log(error);
-      dispatch(fetchFail());
-      toastSuccessNotify("Register Failed");
+      console.log(error)
+      dispatch(fetchFail())
+      toastErrorNotify("Kayit islemi basarisiz olmustur.")
     }
-  };
-  return { login, logout, register };
-};
+  }
 
-export default useAuthCall;
+  return { login, logout, register }
+}
+
+export default useAuthCall

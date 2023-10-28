@@ -1,20 +1,17 @@
-import React, { useEffect } from "react";
-import useStockCall from "../hooks/useStockCall";
-import { useSelector } from "react-redux";
+import { useEffect } from "react"
+import useStockCall from "../hooks/useStockCall"
+import { useSelector } from "react-redux"
 
 const Sales = () => {
-  const Purchases = () => {
-    const { getStockData } = useStockCall();
+  const { getStockData } = useStockCall()
+  const { sales } = useSelector((state) => state.stock)
 
-    const { sales } = useSelector((state) => state.stock);
+  useEffect(() => {
+    getStockData("sales")
+  }, [])
 
-    useEffect(() => {
-      getStockData("sales");
-    }, []);
+  console.log(sales)
+  return <div>Sales</div>
+}
 
-    console.log(sales);
-
-    return <div>Sales</div>;
-  };
-};
-export default Sales;
+export default Sales

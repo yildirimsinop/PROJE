@@ -1,36 +1,37 @@
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-// import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
-import { modalStyle } from "../styles/globalStyles";
-import { useState } from "react";
-import useStockCall from "../hooks/useStockCall";
+import { useState } from "react"
+import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
+import Typography from "@mui/material/Typography"
+import TextField from "@mui/material/TextField"
+import Modal from "@mui/material/Modal"
+import { modalStyle } from "../styles/globalStyles"
+import useStockCall from "../hooks/useStockCall"
 
 export default function FirmModal({ open, handleClose, info, setInfo }) {
-  const { postStockData, putStockData } = useStockCall();
-  // const [info, setInfo] = useState({
-  //   name: "",
-  //   phone: "",
-  //   address: "",
-  //   image: "",
-  // });
+  const { postStockData, putStockData } = useStockCall()
+  //   const [info, setInfo] = useState({
+  //     name: "",
+  //     phone: "",
+  //     address: "",
+  //     image: "",
+  //   })
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setInfo({ ...info, [name]: value });
-  };
+    // const { name, value } = e.target
+    setInfo({ ...info, [e.target.name]: e.target.value })
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    console.log(info.id)
     if (info.id) {
-      putStockData("firms", info);
+      putStockData("firms", info)
     } else {
-      postStockData("firms", info);
+      postStockData("firms", info)
     }
-    handleClose();
-  };
+
+    handleClose()
+  }
   return (
     <div>
       <Modal
@@ -76,6 +77,7 @@ export default function FirmModal({ open, handleClose, info, setInfo }) {
               required
               onChange={handleChange}
             />
+
             <TextField
               label="Image"
               name="image"
@@ -86,6 +88,7 @@ export default function FirmModal({ open, handleClose, info, setInfo }) {
               required
               onChange={handleChange}
             />
+
             <Button variant="contained" type="submit">
               Submit
             </Button>
@@ -93,5 +96,5 @@ export default function FirmModal({ open, handleClose, info, setInfo }) {
         </Box>
       </Modal>
     </div>
-  );
+  )
 }
